@@ -1,4 +1,4 @@
-// Sticky navbar
+// navbar
 const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
@@ -9,7 +9,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Mobile menu
+// menu
 const toggleBtn = document.getElementById("navbarToggle");
 const menu = document.getElementById("navbarMenu");
 
