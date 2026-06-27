@@ -5,27 +5,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Exo:ital,wght@0,100..900;1,100..900&family=Gabarito&family=Lobster&family=Tagesschrift&family=Tangerine:wght@400;700&display=swap"
+        rel="stylesheet">
     <title>Premier Schools Exhibition (PSE)</title>
 </head>
 
 <body>
-    <nav>
-        <div class="navbar">
-            <div class="navbar__container">
+    <nav class="navbar" id="navbar">
+        <div class="navbar_container">
 
-                <a href="/" class="navbar__logo">
-                    <img src="assets/PESLogo.png" alt="Premier Schools Exhibition Logo">
+            <a href="/" class="navbar_logo">
+                <img src="assets/PESLogo.png" alt="Premier Schools Exhibition Logo">
+            </a>
+
+            <button class="navbar_toggle" id="navbarToggle" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="navbar_actions" id="navbarMenu">
+                <span class="navbar_icon">
+                    <i class="fa-solid fa-right-long"></i>
+                </span>
+
+                <a href="#register" class="navbar_button">
+                    REGISTER NOW <i class="fa-solid fa-right-long"></i>
                 </a>
-
-                <nav class="navbar__actions">
-                    <a href="#register" class="navbar__button">
-                        Register Now
-                    </a>
-                </nav>
-
             </div>
+
         </div>
     </nav>
+    <main>
+        <section class="hero">
+
+            <!-- LEFT -->
+            <div class="hero__left">
+
+                <h1 class="hero__title">
+                    Discover Gurugram's <br>
+                    <span>Top 30+ Schools</span>
+                </h1>
+
+                <p class="hero__subtitle">
+                    ALL IN ONE PLACE
+                </p>
+
+                <div class="hero__event">
+
+                    <div>
+                        <h3>Apparel House,</h3>
+                        <p>Sec 44, Gurugram</p>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div>
+                        <h3>2–3 August 2025</h3>
+                        <p>Sat–Sun | 10AM – 6PM</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CENTER -->
+            <div class="hero__gallery">
+
+                <div class="slider slider--one">
+                    <div class="slider__track">
+                        <!-- Duplicate these images for seamless looping -->
+                        <img src="assets/slideImg1.png" alt="">
+                        <img src="assets/slideImg2.png" alt="">
+                        <img src="assets/slideImg3.png" alt="">
+                        <img src="assets/slideImg4.png" alt="">
+                        <img src="assets/slideImg5.png" alt="">
+                        <img src="assets/slideImg6.png" alt="">
+                        <img src="assets/slideImg7.png" alt="">
+                        <img src="assets/slideImg3.png" alt="">
+                    </div>
+                </div>
+
+                <div class="slider slider--two">
+                    <div class="slider__track">
+                        <img src="assets/slideImg3.png" alt="">
+                        <img src="assets/slideImg4.png" alt="">
+                        <img src="assets/slideImg5.png" alt="">
+                        <img src="assets/slideImg1.png" alt="">
+                        <img src="assets/slideImg2.png" alt="">
+                        <img src="assets/slideImg6.png" alt="">
+                        <img src="assets/slideImg7.png" alt="">
+                        <img src="assets/slideImg5.png" alt="">
+                    </div>
+                </div>
+
+                <div class="slider slider--three">
+                    <div class="slider__track">
+                        <img src="assets/slideImg7.png" alt="">
+                        <img src="assets/slideImg6.png" alt="">
+                        <img src="assets/slideImg5.png" alt="">
+                        <img src="assets/slideImg4.png" alt="">
+                        <img src="assets/slideImg3.png" alt="">
+                        <img src="assets/slideImg1.png" alt="">
+                        <img src="assets/slideImg2.png" alt="">
+                        <img src="assets/slideImg6.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="hero__form">
+
+                <h2>Enquire Now</h2>
+
+                <input type="text" placeholder="Parent's Name">
+
+                <input type="tel" placeholder="Phone Number">
+
+                <textarea placeholder="Which grade are you looking for?"></textarea>
+
+                <button>SUBMIT</button>
+
+            </div>
+
+            </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
