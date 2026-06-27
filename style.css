@@ -186,7 +186,7 @@ body {
     overflow: hidden;
 }
 
-/* LEFT */
+/* hero section left side */
 
 .hero__title {
     font-size: 2.5rem;
@@ -235,14 +235,14 @@ body {
     background: #a57a4b;
 }
 
-/* CENTER */
+/* hero section center */
 
 .hero__gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap:18px;
-    width:100%;
-    justify-items:center;
+    gap: 18px;
+    width: 100%;
+    justify-items: center;
     height: 720px;
     overflow: hidden;
 }
@@ -279,6 +279,8 @@ body {
 
     animation: scrollUpSlow 24s linear infinite;
 }
+
+/* hero section animation  */
 
 @keyframes scrollUp {
 
@@ -333,13 +335,13 @@ body {
 
 .hero__form {
     margin: auto;
-    width:100%;
-    max-width:320px;
-    justify-self:end;
-    background:rgba(58,18,97,.72);
-    padding:28px;
-    border-radius:22px;
-    backdrop-filter:blur(12px);
+    width: 100%;
+    max-width: 320px;
+    justify-self: end;
+    background: rgba(58, 18, 97, .72);
+    padding: 28px;
+    border-radius: 22px;
+    backdrop-filter: blur(12px);
     position: relative;
     top: -50px;
     left: 20px;
@@ -401,12 +403,829 @@ body {
     transition: .5s all;
 }
 
-/* media */
-@media (min-width: 1200px) {
-    .hero {
-    max-height: 550px;
+/* stats section */
+
+.stats {
+    background: #fff;
+    padding: 70px 5%;
+}
+
+.stats_container {
+    max-width: 1400px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat_item {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.laurel {
+    width: 70px;
     height: auto;
 }
+
+.stat_content {
+
+    text-align: center;
+    color: #0b2b72;
+}
+
+.stat_content h2 {
+
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.stat_content p {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+/* schools section  */
+
+.schools {
+    padding: 70px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    color: #21155f;
+    font-weight: 700;
+}
+
+.schools-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.schools-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+
+    animation: marquee 28s linear infinite;
+}
+
+.school-card {
+
+    width: 270px;
+    height: 120px;
+
+    background: #fff;
+
+    border: 1px solid #e8e8e8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    transition: .35s;
+}
+
+.school-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .12);
+}
+
+.school-card img {
+
+    max-width: 170px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.schools-track:hover {
+
+    animation-play-state: paused;
+}
+
+.reverse-track {
+
+    animation: marqueeReverse 30s linear infinite;
+}
+
+.reverse {
+    margin-top: 30px;
+}
+
+/* choose school section  */
+
+.choose-school-section {
+
+    width: 100%;
+    max-width: 1400px;
+    margin: 90px auto;
+    padding: 0 20px;
+}
+
+.choose-school-heading {
+
+    text-align: center;
+    font-size: 3rem;
+    color: #24195f;
+    font-weight: 700;
+    margin-bottom: 55px;
+}
+
+.choose-school-grid {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.choose-school-card {
+
+    position: relative;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+.choose-school-card img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.choose-school-card:hover img {
+
+    transform: scale(1.08);
+}
+
+.choose-school-dark {
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, .85),
+            rgba(0, 0, 0, .25),
+            rgba(0, 0, 0, 0));
+}
+
+.choose-school-info {
+
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 28px;
+    color: #fff;
+}
+
+.choose-school-info h3 {
+
+    font-size: 1.45rem;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.choose-school-info p {
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* appointment section  */
+
+.appointment-section {
+
+    position: relative;
+
+    width: 100%;
+
+    max-height: 500px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 5% 6%;
+    background: url("assets/imageBigLeft.png") center center/cover no-repeat;
+}
+
+/* Purple gradient */
+
+.appointment-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(90deg,
+            rgba(226, 205, 255, .96) 0%,
+            rgba(226, 205, 255, .90) 28%,
+            rgba(226, 205, 255, .65) 48%,
+            rgba(226, 205, 255, .18) 62%,
+            rgba(226, 205, 255, 0) 75%);
+}
+
+.appointment-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 560px;
+}
+
+.appointment-tagline {
+
+    font-size: 2rem;
+
+    color: #7b42d8;
+
+    font-style: italic;
+
+    margin-bottom: 20px;
+}
+
+.appointment-title {
+
+    font-size: 3.5rem;
+
+    line-height: 1;
+
+    color: #24195f;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+.appointment-subtitle {
+
+    font-size: 2.2rem;
+
+    color: #7b42d8;
+
+    font-style: italic;
+
+    margin-bottom: 45px;
+}
+
+.appointment-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    border: 2px solid #24195f;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    transition: .35s;
+}
+
+.appointment-btn-icon {
+
+    width: 62px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #20185d;
+
+    color: #fff;
+
+    font-size: 22px;
+}
+
+.appointment-btn-icon i {
+
+    transform: rotate(0deg);
+
+    transition: .3s;
+}
+
+.appointment-btn:hover .appointment-btn-icon i {
+
+    transform: rotate(90deg);
+
+}
+
+.appointment-btn:hover .appointment-btn-text {
+    background-color: #24195f;
+    color: #fff;
+}
+
+.appointment-btn-text {
+
+    background: #d8c1ff;
+
+    color: #24195f;
+
+    padding: 0 22px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+}
+
+.appointment-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .18);
+}
+
+/* must visit section  */
+
+.mustvisit-section {
+    position: relative;
+    padding: 90px 0 160px;
+
+    overflow: hidden;
+
+    background: linear-gradient(180deg,
+            #471972 0%,
+            #2d135d 45%,
+            #11184e 100%);
+
+}
+
+.mustvisit-container {
+
+    width: 92%;
+
+    max-width: 1720px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.mustvisit-heading {
+
+    text-align: center;
+
+    color: #fff;
+
+    font-size: 56px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    margin-bottom: 55px;
+
+}
+
+.mustvisit-slider-wrapper {
+
+    overflow: hidden;
+
+}
+
+.mustvisit-slider {
+
+    display: flex;
+
+    gap: 18px;
+
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+
+    padding-bottom: 8px;
+
+}
+
+.mustvisit-slider::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.mustvisit-card {
+
+    flex: 0 0 420px;
+
+    height: 300px;
+
+    background: #ead8ff;
+
+    border-radius: 22px;
+
+    border: 2px solid rgba(90, 55, 160, .35);
+
+    padding: 34px 30px;
+
+    transition: .35s;
+
+}
+
+.mustvisit-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 25px 40px rgba(0, 0, 0, .18);
+
+}
+
+.card-image {
+
+    width: 75px;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+}
+
+.card-image img {
+
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: contain;
+
+}
+
+.card-content h3 {
+
+    color: #26124c;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    line-height: 1.45;
+
+    margin-bottom: 16px;
+
+}
+
+.card-content p {
+
+    color: #3c2e61;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    font-weight: 400;
+
+}
+
+.mustvisit-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 22px;
+
+    margin-top: 42px;
+
+}
+
+.mustvisit-buttons button {
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    transition: .35s;
+
+}
+
+#prevBtn {
+
+    background: transparent;
+
+    color: #fff;
+
+    border: 2px solid rgba(255, 255, 255, .8);
+
+}
+
+#prevBtn:hover {
+
+    background: #fff;
+
+    color: #241252;
+
+}
+
+#nextBtn {
+
+    background: #fff;
+
+    color: #22124d;
+
+    border: none;
+
+}
+
+#nextBtn:hover {
+
+    transform: scale(1.08);
+
+}
+
+.mustvisit-wave {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -2px;
+
+    width: 100%;
+
+    line-height: 0;
+
+}
+
+.mustvisit-wave svg {
+
+    width: 100%;
+
+    height: 150px;
+
+    display: block;
+
+}
+
+.mustvisit-slider {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.mustvisit-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.mustvisit-card {
+    flex: 0 0 380px;
+}
+
+/* footer  */
+.footer {
+    width: 100%;
+    background: linear-gradient(180deg, #43146f 0%, #121a56 100%);
+    color: #fff;
+    margin-top: 60px;
+}
+
+
+.footer-container {
+
+    max-width: 1320px;
+
+    margin: auto;
+
+    padding: 45px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 35px;
+
+    flex-wrap: wrap;
+
+}
+
+.footer-logo img {
+
+    width: 120px;
+
+    display: block;
+
+}
+
+.footer-box {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex: 1;
+
+    min-width: 220px;
+
+}
+
+.footer-icon {
+
+    width: 54px;
+
+    height: 54px;
+
+    border-radius: 12px;
+
+    background: #e9d7ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+}
+
+.footer-icon i {
+
+    font-size: 24px;
+
+    color: #54218e;
+
+}
+
+.footer-box h3,
+.footer-social h3 {
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+
+    font-weight: 700;
+
+}
+
+.footer-box p {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #f3f3f3;
+
+}
+
+.footer-social {
+
+    min-width: 180px;
+
+}
+
+.social-icons {
+
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 18px;
+
+}
+
+.social-icons a {
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 10px;
+
+    background: #e9d7ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #4d237d;
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    transition: .3s;
+
+}
+
+.social-icons a:hover {
+
+    background: #ffffff;
+
+    transform: translateY(-4px);
+
+}
+
+
+.footer-bottom {
+
+    background: #fff;
+
+    color: #1e1e65;
+
+    text-align: center;
+
+    padding: 18px;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+}
+
+/* school section animation */
+
+@keyframes marqueeReverse {
+
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes marquee {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* media */
+
+@media (max-width: 1400px) {
+    .hero {
+        grid-template-columns: 1.2fr 1.25fr 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        max-height: 550px;
+        height: auto;
+    }
 
     .hero__title {
         font-size: 2rem;
@@ -446,11 +1265,33 @@ body {
         background: #a57a4b;
     }
 }
-@media (max-width: 1400px) {
-    .hero {
-         grid-template-columns: 1.2fr 1.25fr 300px;
+
+@media(max-width:1200px) {
+
+    .mustvisit-heading {
+
+        font-size: 46px;
+
+    }
+
+    .mustvisit-card {
+
+        flex: 0 0 360px;
+
+        height: 350px;
+
+    }
+
+    .stats_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-container {
+
+        justify-content: center;
+
     }
 }
+
 /* Tablet */
 @media (max-width: 992px) {
 
@@ -527,17 +1368,151 @@ body {
 
         height: 1px;
     }
+
     .hero__form {
-    position: relative;
-    top: 0px;
-    left: 0px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+
+    .hero {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 40px;
+
+    }
+
+    .hero__left {
+
+        max-width: 650px;
+
+    }
+
+    .hero__gallery {
+
+        max-width: 420px;
+
+    }
+
+    .hero__form {
+
+        max-width: 500px;
+
+    }
+
+    .hero__subtitle {
+        margin-bottom: 30px;
+    }
+
+    .stats_container {
+
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 45px;
+    }
+
+    .section-title h2 {
+
+        font-size: 34px;
+    }
+
+    .school-card {
+
+        width: 220px;
+        height: 100px;
+    }
+
+    .school-card img {
+
+        max-width: 140px;
+    }
+
+    .choose-school-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .choose-school-heading {
+
+        font-size: 2.5rem;
+    }
+
+    .appointment-section {
+
+        height: 550px;
+
+        background-position: 65%;
+    }
+
+    .appointment-content {
+
+        max-width: 470px;
+    }
+
+    .appointment-title {
+
+        font-size: 3.2rem;
+    }
+
+    .appointment-tagline {
+
+        font-size: 1.6rem;
+    }
+
+    .appointment-subtitle {
+
+        font-size: 1.8rem;
+    }
+
+    .mustvisit-heading {
+
+        font-size: 38px;
+
+    }
+
+    .mustvisit-card {
+
+        flex: 0 0 320px;
+
+        height: 340px;
+
+    }
+
+
+    .footer-container {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 35px;
+
+    }
+
+    .footer-logo {
+
+        grid-column: span 2;
+
+        text-align: center;
+
+    }
+
+    .footer-logo img {
+
+        margin: auto;
+
     }
 }
 
-
 /* Mobile */
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
 
     .navbar {
         height: 72px;
@@ -557,10 +1532,6 @@ body {
         padding: 12px 20px;
         font-size: 14px;
     }
-
-}
-
-@media (max-width:768px) {
 
     .navbar_logo img {
         height: 90px;
@@ -603,6 +1574,260 @@ body {
         justify-content: center;
         border: none;
     }
+
+    /* school slider  */
+
+    .schools {
+
+        padding: 50px 0;
+    }
+
+    .section-title {
+
+        margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+
+        font-size: 28px;
+    }
+
+    .school-card {
+
+        width: 180px;
+        height: 90px;
+    }
+
+    .school-card img {
+
+        max-width: 120px;
+    }
+
+    .schools-track {
+
+        gap: 18px;
+    }
+
+    /* choose school section */
+
+    .choose-school-section {
+
+        margin: 60px auto;
+        padding: 0 15px;
+    }
+
+    .choose-school-grid {
+
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .choose-school-card {
+
+        height: 360px;
+    }
+
+    .choose-school-heading {
+
+        font-size: 2rem;
+        margin-bottom: 35px;
+    }
+
+    .choose-school-info h3 {
+
+        font-size: 1.25rem;
+    }
+
+    .choose-school-info p {
+
+        font-size: 0.95rem;
+    }
+
+    .appointment-section {
+
+        height: 500px;
+
+        padding: 40px 25px;
+
+        background-position: 70%;
+    }
+
+    .appointment-overlay {
+
+        background: rgba(230, 210, 255, .90);
+    }
+
+    .appointment-content {
+
+        max-width: 100%;
+    }
+
+    .appointment-title {
+
+        font-size: 2.4rem;
+    }
+
+    .appointment-tagline {
+
+        font-size: 1.3rem;
+    }
+
+    .appointment-subtitle {
+
+        font-size: 1.4rem;
+
+        margin-bottom: 30px;
+    }
+
+    .appointment-btn-text {
+
+        padding: 0 18px;
+
+        font-size: .9rem;
+    }
+
+    .appointment-btn-icon {
+
+        width: 55px;
+
+        height: 55px;
+    }
+
+    .appointment-btn-text {
+
+        height: 55px;
+    }
+
+    .mustvisit-section {
+
+        padding: 70px 0 130px;
+
+    }
+
+    .mustvisit-container {
+
+        width: 95%;
+
+    }
+
+    .mustvisit-heading {
+
+        font-size: 30px;
+
+        margin-bottom: 40px;
+
+    }
+
+    .mustvisit-card {
+
+        flex: 0 0 290px;
+
+        height: 320px;
+
+        padding: 26px;
+
+    }
+
+    .card-image {
+
+        width: 60px;
+
+        height: 60px;
+
+    }
+
+    .card-image img {
+
+        width: 50px;
+
+        height: 50px;
+
+    }
+
+    .card-content h3 {
+
+        font-size: 20px;
+
+    }
+
+    .card-content p {
+
+        font-size: 15px;
+
+    }
+
+    .mustvisit-buttons {
+
+        margin-top: 35px;
+
+    }
+
+    .mustvisit-buttons button {
+
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 18px;
+
+    }
+
+    .mustvisit-wave svg {
+
+        height: 90px;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+    .footer-logo {
+
+        grid-column: span 1;
+
+    }
+
+    .footer-box {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .social-icons {
+
+        justify-content: center;
+
+    }
+
+    .footer-box h3,
+    .footer-social h3 {
+
+        font-size: 22px;
+
+    }
+
+    .footer-box p {
+
+        font-size: 16px;
+
+    }
+
+    .footer-bottom {
+
+        font-size: 15px;
+
+        padding: 15px;
+
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -630,77 +1855,6 @@ body {
 
     }
 
-    .slider img {
-        height: 200px;
-    }
-
-    .hero__title {
-
-        font-size: 2.2rem;
-    }
-
-    .hero__title span {
-
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width:420px) {
-
-    .slider {
-
-        width: 82px;
-
-    }
-
-    .slider img {
-
-        height: 170px;
-
-    }
-    
-}
-
-@media (max-width:992px) {
-
-    .hero {
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        text-align: center;
-
-        gap: 40px;
-
-    }
-
-    .hero__left {
-
-        max-width: 650px;
-
-    }
-
-    .hero__gallery {
-
-        max-width: 420px;
-
-    }
-
-    .hero__form {
-
-        max-width: 500px;
-
-    }
-    .hero__subtitle {
-        margin-bottom: 30px;
-    }
-}
-
-@media(max-width:600px) {
-
     .hero__title {
 
         font-size: 2rem;
@@ -718,7 +1872,121 @@ body {
         font-size: 1.2rem;
 
     }
+
     .hero__subtitle {
         margin-bottom: 30px;
     }
+
+    .slider img {
+        height: 200px;
+    }
+
+    .hero__title {
+
+        font-size: 2.2rem;
+    }
+
+    .hero__title span {
+
+        font-size: 2.5rem;
+    }
+
+    .stats {
+
+        padding: 50px 20px;
+    }
+
+    .stats_container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .stat_item {
+
+        gap: 15px;
+    }
+
+    .laurel {
+
+        width: 60px;
+    }
+
+    .stat_content h2 {
+
+        font-size: 2rem;
+    }
+
+    .stat_content p {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:480px) {
+
+    .mustvisit-heading {
+
+        font-size: 26px;
+
+    }
+
+    .mustvisit-card {
+        flex: 0 0 260px;
+    }
+
+    .footer {
+
+        margin-top: 40px;
+
+    }
+
+    .footer-container {
+
+        padding: 35px 18px;
+
+        gap: 30px;
+
+    }
+
+    .footer-logo img {
+
+        width: 95px;
+
+    }
+
+    .footer-icon {
+
+        width: 46px;
+
+        height: 46px;
+
+    }
+
+    .footer-icon i {
+
+        font-size: 20px;
+
+    }
+
+    .social-icons a {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 20px;
+
+    }
+
+}
+
+@media (max-width:420px) {
+
+    .slider {
+        width: 82px;
+    }
+
+    .slider img {
+        height: 170px;
+    }
+
 }
